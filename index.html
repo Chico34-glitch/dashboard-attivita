@@ -1,1 +1,54 @@
+<!DOCTYPE html> <!-- Dichiara il tipo di documento HTML -->
+<html lang="it"> <!-- Inizio del documento HTML in lingua italiana -->
+<head>
+  <meta charset="UTF-8"> <!-- Set di caratteri utilizzato -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design per dispositivi mobili -->
+  <title>Dashboard Attività</title> <!-- Titolo della pagina -->
+  <link rel="stylesheet" href="style.css"> <!-- Collegamento al file CSS -->
+</head>
+<body>
+  <h1>Gestione Attività</h1> <!-- Titolo principale della dashboard -->
 
+  <!-- Form per aggiungere una nuova attività -->
+  <section id="add-task">
+    <h2>Aggiungi Attività</h2>
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Titolo" required> <!-- Campo per il titolo -->
+      <select id="task-status"> <!-- Menu a tendina per scegliere lo stato -->
+        <option value="todo">Da fare</option>
+        <option value="in_progress">In corso</option>
+        <option value="done">Completata</option>
+      </select>
+      <button type="submit">Aggiungi</button> <!-- Pulsante per aggiungere l’attività -->
+    </form>
+  </section>
+
+  <!-- Sezione per filtrare le attività -->
+  <section id="filter-tasks">
+    <h2>Filtra per Stato</h2>
+    <select id="filter-select">
+      <option value="all">Tutte</option>
+      <option value="todo">Da fare</option>
+      <option value="in_progress">In corso</option>
+      <option value="done">Completate</option>
+    </select>
+  </section>
+
+  <!-- Elenco delle attività -->
+  <section id="task-list">
+    <h2>Elenco Attività</h2>
+    <ul id="tasks"></ul> <!-- Lista dinamica che verrà riempita via JavaScript -->
+  </section>
+
+  <!-- Statistiche attività -->
+  <section id="stats">
+    <h2>Statistiche</h2>
+    <p>Da fare: <span id="stat-todo">0</span></p>
+    <p>In corso: <span id="stat-in-progress">0</span></p>
+    <p>Completate: <span id="stat-done">0</span></p>
+  </section>
+
+  <!-- Collegamento al file JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
